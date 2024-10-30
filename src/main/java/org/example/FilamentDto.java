@@ -1,6 +1,10 @@
 package org.example;
 
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.io.Serializable;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -9,11 +13,27 @@ import lombok.*;
 @EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor
-public class FilamentDto implements Comparable<FilamentDto>{
+@Entity
+@Table(name = "filament_dtos")
+public class FilamentDto implements Serializable, Comparable<FilamentDto> {
+
+    @Id
+    @Column(name = "id", nullable = false, unique = true, columnDefinition = "BINARY(16)")
+    private UUID id;
+
+    @Column(name = "brand", nullable = false)
     private String brand;
+
+    @Column(name = "color", nullable = false)
     private String color;
+
+    @Column(name = "weight", nullable = false)
     private int weight;
+
+    @Column(name = "diameter", nullable = false)
     private int diameter;
+
+    @Column(name = "material", nullable = false)
     private String material;
 
     @Override
