@@ -2,6 +2,7 @@ package org.example;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.http.ResponseEntity;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -44,4 +45,7 @@ public class Material implements Serializable {
         filament.setMaterial(this);
     }
 
+    public List<Filament> getFilaments() {
+        return filamets;
+    }
 }

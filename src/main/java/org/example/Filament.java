@@ -2,6 +2,7 @@ package org.example;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.example.dto.FilamentCollectionDto;
 
 import java.io.Serializable;
 import java.util.UUID;
@@ -45,5 +46,13 @@ public class Filament implements Serializable {
         this.weight = weight;
         this.diameter = diameter;
         this.material = material;
+    }
+
+    public Filament(FilamentCollectionDto filamentDto) {
+        this.id = filamentDto.getId();
+        this.brand = filamentDto.getBrand();
+        this.color = filamentDto.getColor();
+        this.weight = filamentDto.getWeight();
+        this.diameter = filamentDto.getDiameter();
     }
 }

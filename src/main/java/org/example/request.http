@@ -1,0 +1,57 @@
+### 1. Wszystkie materialy
+GET http://localhost:8080/api/materials
+
+### 2. Material o id
+GET http://localhost:8080/api/materials/87c17d00-52e0-41a8-a46a-90bb279acaf2
+
+### 3. Dodaj material
+POST http://localhost:8080/api/materials
+Content-Type: application/json
+
+{
+    "type": "Mat2",
+    "meltingTemp": "250"
+}
+
+### 4. Aktualizuj material
+PUT http://localhost:8080/api/materials/a88ad7c0-2b30-4045-94d8-d19cc3de2f7e
+Content-Type: application/json
+
+{
+    "type": "Mat2",
+    "meltingTemp": "260"
+}
+
+### 5. Wszystkie filamenty
+GET http://localhost:8080/api/filaments
+
+### 6. Filament o id
+GET http://localhost:8080/api/filaments/76b912e2-59f3-4696-bc42-c9ba76da9b3a
+
+### 7. Dodaj filament
+POST http://localhost:8080/api/filaments/4f7d2011-91ba-4fb7-b018-6b494f1f20b2
+Content-Type: application/json
+
+{
+    "brand": "Brand1",
+    "diameter": "175",
+    "color": "Red",
+    "weight": "1000"
+}
+
+### 8. Aktualizuj filament
+PUT http://localhost:8080/api/filaments/f8008c31-b1b4-4580-bb33-2c99a539f0ef
+Content-Type: application/json
+
+{
+    "brand": "Brand1",
+    "diameter": "175",
+    "color": "Red",
+    "weight": "2000"
+}
+
+### 9, Usun filament
+DELETE http://localhost:8080/api/filaments/1428d0d9-d159-45fe-b876-f041f47b8560
+
+### 10. Usun material
+DELETE http://localhost:8080/api/materials/34bc8d66-dd0f-4933-ad38-c4efef6b06db
